@@ -21,13 +21,6 @@ namespace Tour
             temp = ClientCodeProsiimo[1].ToString() + ClientCodeProsiimo[2].ToString() + ClientCodeProsiimo[3].ToString();
             Numerocodice = Convert.ToInt32(temp);
         }
-        public void add(string nome, string dest)       //costruisco il metodo per aggiungere al dizionario
-        {
-            Client cliente = new Client(nome, dest);
-            Dixionari.Add(ClientCodeProsiimo, cliente);
-            incrementoCode();
-
-        }
         public string toString()        //metodo per la visualizzare elementi 
         {
             string tmp = "";
@@ -36,6 +29,13 @@ namespace Tour
                     tmp += key.Key + ":" + key.Value.ToString() + "\n";
             else throw new Exception();
             return tmp;
+        }
+        public void add(string nome, string dest)       //costruisco il metodo per aggiungere al dizionario
+        {
+            Client cliente = new Client(nome, dest);
+            Dixionari.Add(ClientCodeProsiimo, cliente);
+            incrementoCode();
+
         }
         private void incrementoCode()           //metodo per incrementare il codice
         {
