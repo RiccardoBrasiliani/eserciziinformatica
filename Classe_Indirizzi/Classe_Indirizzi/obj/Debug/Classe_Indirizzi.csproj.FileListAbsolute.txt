@@ -1,0 +1,7 @@
+C:\Users\Utente\Desktop\Informatica_4\Classe_Indirizzi\Classe_Indirizzi\bin\Debug\Classe_Indirizzi.exe.config
+C:\Users\Utente\Desktop\Informatica_4\Classe_Indirizzi\Classe_Indirizzi\bin\Debug\Classe_Indirizzi.exe
+C:\Users\Utente\Desktop\Informatica_4\Classe_Indirizzi\Classe_Indirizzi\bin\Debug\Classe_Indirizzi.pdb
+C:\Users\Utente\Desktop\Informatica_4\Classe_Indirizzi\Classe_Indirizzi\obj\Debug\Classe_Indirizzi.csproj.AssemblyReference.cache
+C:\Users\Utente\Desktop\Informatica_4\Classe_Indirizzi\Classe_Indirizzi\obj\Debug\Classe_Indirizzi.csproj.CoreCompileInputs.cache
+C:\Users\Utente\Desktop\Informatica_4\Classe_Indirizzi\Classe_Indirizzi\obj\Debug\Classe_Indirizzi.exe
+C:\Users\Utente\Desktop\Informatica_4\Classe_Indirizzi\Classe_Indirizzi\obj\Debug\Classe_Indirizzi.pdb
