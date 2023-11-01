@@ -38,8 +38,8 @@ class Sala {
     public static function getUltimoSalaId()
     {
         DbManager::initialize("localhost", "concerto", "file.txt");
-        
-        $query = "SELECT MAX(id) as last_id FROM sale";
+
+        $query = "SELECT MAX(id) as ultimo_id FROM sale";
 
         try {
             $stmt = DbManager::getPdo()->prepare($query);
@@ -48,13 +48,13 @@ class Sala {
 
             if ($sala) 
             {
-                return $sala['last_id'];
+                return $sala['ultimo_id'];
 
             } else {
                 return null;
             }
         } catch (PDOException $e) {
-            die("\nErrore nell'ottenere l'ultimo ID dalla tabella 'sale': " . $e->getMessage());
+            die("\nErrore': " . $e->getMessage());
         }
     }
 }
