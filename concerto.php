@@ -156,17 +156,17 @@ class Concerto
     }
     public function sala()
     {
-        DbManager::initialize("localhost", "concerto", "file.txt");
-        $salaId = $this->getSalaId();
+        DbManager::initialize("localhost", "concerto", "file.txt"); //inizializzo la connessione con il db
+        $salaId = $this->getSalaId(); //prendo l'id della sala
         $query = "SELECT * FROM sale WHERE id = :sala_id";
         try {
-            $stmt = DbManager::getPdo()->prepare($query);
-            $stmt->bindParam(':sala_id', $salaId, PDO::PARAM_INT);
+            $stmt = DbManager::getPdo()->prepare($query); //preparo la query
+            $stmt->bindParam(':sala_id', $salaId, PDO::PARAM_INT); //associo i parametri 
             $stmt->execute();
-            $recordsala = $stmt->fetchObject('Sala');
+            $recordsala = $stmt->fetchObject('Sala'); //assegno il valore di ritorno della fetch ad una variabile controlo che sia un oggeto
             if ($recordsala) 
             {
-                return $recordsala;
+                return $recordsala; 
             } else {
                 return null; 
             }
