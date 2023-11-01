@@ -37,12 +37,12 @@ class Sala {
   
     public static function getUltimoSalaId()
     {
-        DbManager::initialize("localhost", "concerto", "file.txt");
+        DbManager::initialize("localhost", "concerto", "file.txt"); //inizliazzo la connesione 
 
-        $query = "SELECT MAX(id) as ultimo_id FROM sale";
+        $query = "SELECT MAX(id) as ultimo_id FROM sale"; //preparo la query per trovare la sala con l'id più alto
 
         try {
-            $stmt = DbManager::getPdo()->prepare($query);
+            $stmt = DbManager::getPdo()->prepare($query); //preparo la query
             $stmt->execute();
             $sala = $stmt->fetch(PDO::FETCH_ASSOC);
 
