@@ -121,15 +121,15 @@ while (true) {
             break;
         case '6':
             echo "Sala\n";
-            $id_find = readline("Digita id record di cui vuoi visualizzare la sala: ");
-            $record = Concerto::find($id_find);
+            $id_find = readline("Digita id che corrsiponde alla sala: ");
+            $record = Concerto::find($id_find); //cerco il record della sala attraverso il metodo find che mi ritorna la sala 
             if ($record) {
                 $sala = $record->sala();
-                echo "\nNome: " . $sala->getNome() . "\n";
+                echo "Nome: " . $sala->getNome() . "\n";
                 echo "Codice: " . $sala->getCodice() . "\n";
                 echo "Capienza: " .$sala->getCapienza() . "\n";
             } else 
-                echo "Nessun record trovato con l'ID $id_find";
+                echo "Nessun record trovato ";
             break;
         case '0':
             //esco dal programma
