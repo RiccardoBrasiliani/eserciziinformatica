@@ -131,6 +131,13 @@ while (true) {
             } else 
                 echo "Nessun record trovato ";
             break;
+        case '7':
+            echo "Pezzi\n";
+            $id_concerto=readline("scrivi il numero del concerto: ");
+            $record = Concerto::find($id_find);
+            $array=$recor->Pezzi();
+            var_dump($array); 
+            break;
         case '0':
             //esco dal programma
             echo 'Esci';
