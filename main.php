@@ -2,6 +2,7 @@
 include "concerto.php";
 include "db_manager.php";
 include "Sala.php";
+include "Pezzo.php";
 
 function chiediDatiConcerto() {
     
