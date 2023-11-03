@@ -174,5 +174,24 @@ class Concerto
             die("\nErrore nella ricerca dell'elemento: " . $e->getMessage());        
         }
     }
+    public function Pezzi()
+    {
+        DbManager::initialize("localhost", "concerto", "file.txt"); //inizliazzo la connesione 
+        $query= "select id,codice,titolo
+        from concerti_pezzi inner join pezzi on pezzo_id=id where concerto_id=:id";
+
+        try
+        {
+            $stmt = DbManager::getPdo()->prepare($query); //preparo la query
+            $stmt->bindParam(':id', $getId(), PDO::PARAM_INT); //associo i parametri 
+            $stmt->execute();
+            $pezzi = $stmt->fetchAll(PDO::FETCH_CLASS,"Pezzo");
+            return $pezzi;
+        }
+        catch(PDOException $e)
+        {
+            die("\nErrore': " . $e->getMessage());
+        }
+    }
 }
 ?>
